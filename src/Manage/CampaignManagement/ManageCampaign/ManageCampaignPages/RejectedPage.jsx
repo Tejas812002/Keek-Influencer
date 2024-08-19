@@ -137,7 +137,7 @@ const RejectedPage = () => {
 
   return (
     <div
-      class={` flex relative ${!expanded
+      className={` flex relative ${!expanded
           ? "left-[100px] w-[calc(100%-110px)]"
           : "left-[320px] w-[calc(100%-320px)]"
         }  overflow-y-auto  bg-white space-y-4 p-4 `}
@@ -299,20 +299,20 @@ const RejectedPage = () => {
           </div>
         </div>
 
-        <div class="">
-          <table class="min-w-full  bg-white ">
+        <div className="">
+          <table className="min-w-full  bg-white ">
             <thead>
-              <tr class=" border-b  uppercase " style={{ height: "80px" }}>
-                <th class="py-3 px-6 text-left text-[#797A7B] text-[12px] font-body font-semibold">Influencer Name</th>
-                <th class="py-3 px-6 text-left text-[#797A7B] text-[12px] font-body font-semibold">Niche</th>
-                <th class="py-3 px-6 text-left text-[#797A7B] text-[12px] font-body font-semibold">Instagram</th>
-                <th class="py-3 px-6 text-left text-[#797A7B] text-[12px] font-body font-semibold">Facebook</th>
-                <th class="py-3 px-6 text-left text-[#797A7B] text-[12px] font-body font-semibold">Youtube</th>
-                <th class="py-3 px-6 text-left text-[#797A7B] text-[12px] font-body font-semibold">LinkedIn</th>
+              <tr className=" border-b  uppercase " style={{ height: "80px" }}>
+                <th className="py-3 px-6 text-left text-[#797A7B] text-[12px] font-body font-semibold">Influencer Name</th>
+                <th className="py-3 px-6 text-left text-[#797A7B] text-[12px] font-body font-semibold">Niche</th>
+                <th className="py-3 px-6 text-left text-[#797A7B] text-[12px] font-body font-semibold">Instagram</th>
+                <th className="py-3 px-6 text-left text-[#797A7B] text-[12px] font-body font-semibold">Facebook</th>
+                <th className="py-3 px-6 text-left text-[#797A7B] text-[12px] font-body font-semibold">Youtube</th>
+                <th className="py-3 px-6 text-left text-[#797A7B] text-[12px] font-body font-semibold">LinkedIn</th>
 
               </tr>
             </thead>
-            <tbody class=" "  >
+            <tbody className=" "  >
               {records.map((influencer, index) => (
                 <tr className="border-b" key={index} style={{ height: "85px" }}>
                   <td className="py-3 px-6 text-[#191D23] text-[16px] font-body font-normal">{influencer.name}</td>

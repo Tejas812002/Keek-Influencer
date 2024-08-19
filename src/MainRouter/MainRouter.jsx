@@ -9,7 +9,9 @@ import ShortlistedPage from "../Manage/CampaignManagement/ManageCampaign/ManageC
 import ApprovedPage from "../Manage/CampaignManagement/ManageCampaign/ManageCampaignPages/ApprovedPage";
 import RejectedPage from "../Manage/CampaignManagement/ManageCampaign/ManageCampaignPages/RejectedPage";
 import AIRecommendPage from "../Manage/CampaignManagement/ManageCampaign/ManageCampaignPages/AIRecommendPage";
-
+import Influencers from "../Manage/DiscoverInfluencers/Influencers";
+import SavedList from "../Manage/DiscoverInfluencers/SavedList";
+import FavouritesList from "../Manage/DiscoverInfluencers/FavouritesList";
 
 const MainRouter = () => {
   return (
@@ -25,15 +27,7 @@ const MainRouter = () => {
           }
         />
 
-        <Route
-          path="/discoverInfluencers"
-          element={
-            <div className="h-screen w-screen flex items-center justify-center bg-slate-400">
-              {" "}
-              discoverInfluencers
-            </div>
-          }
-        />
+        <Route path="/discoverInfluencers" element={<Influencers />} />
         <Route path="/CampaignManagement" element={<LiveCampaign />} />
 
         <Route
@@ -54,9 +48,9 @@ const MainRouter = () => {
             </div>
           }
         />
-        
-        <Route path="/manageCampaign" element={<ManageCampaign />}/>
-        
+
+        <Route path="/manageCampaign" element={<ManageCampaign />} />
+
         <Route path="/Shortlisted" element={<ShortlistedPage />} />
 
         <Route path="/Approved" element={<ApprovedPage />} />
@@ -92,13 +86,12 @@ const MainRouter = () => {
           }
         />
 
-<Route path="/AddCampaign" element={<AddCampaign />} />
-
+        <Route path="/AddCampaign" element={<AddCampaign />} />
 
         <Route path="/PastCampaign" element={<PastCampaign />} />
         <Route path="/DraftCampaign" element={<DraftCampaign />} />
-
-       
+        <Route path="/savedlist" element={<SavedList/>} />
+        <Route path="/favouriteslist" element={<FavouritesList />} />
       </Routes>
     </>
   );

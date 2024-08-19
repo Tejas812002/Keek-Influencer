@@ -135,23 +135,23 @@ const PastCampaign = () => {
       className={`flex relative ${!expanded ? "left-[100px] w-[calc(100%-110px)]" : "left-[320px] w-[calc(100%-320px)]"} overflow-y-auto bg-white space-y-4 p-4`}
     >
       <div className="bg-white w-full">
-      <div class="flex w-full justify-between items-center p-4 bg-white border-border">
+      <div className="flex w-full justify-between items-center p-4 bg-white border-border">
         <div>
-          <h1 class="text-2xl font-bold text-foreground">Manage Campaign</h1>
-          <p class="text-muted-foreground text-sm">
+          <h1 className="text-2xl font-bold text-foreground">Manage Campaign</h1>
+          <p className="text-muted-foreground text-sm">
             Easily create new campaign, keep track of live & past campaigns.
           </p>
         </div>
         <Link to="/AddCampaign">
-          <button class={`bg-[#06F] h-[40px] w-[175px] text-white px-4 py-2.5 text-primary-foreground flex items-center hover:bg-primary/80  rounded-lg 
+          <button className={`bg-[#06F] h-[40px] w-[175px] text-white px-4 py-2.5 text-primary-foreground flex items-center hover:bg-primary/80  rounded-lg 
             ${
               location.pathname === '/AddCampaign' }`}>
-              <span class="mr-2 text-3xl">+</span> Add Campaign
+              <span className="mr-2 text-3xl">+</span> Add Campaign
             </button>
           </Link>
 
       </div>
-        <div class="flex border-b border-border">
+        <div className="flex border-b border-border">
         <div className="flex space-x-4">
         <Link to="/CampaignManagement">
               <button
@@ -187,8 +187,8 @@ const PastCampaign = () => {
       </button>
     </Link>
   </div>
-<div class="relative">
-  <span class="absolute top-0 left-0 transform translate-x-1/2 -translate-y-1/2 bg-destructive rounded-full w-2.5 h-2.5"></span>
+<div className="relative">
+  <span className="absolute top-0 left-0 transform translate-x-1/2 -translate-y-1/2 bg-destructive rounded-full w-2.5 h-2.5"></span>
 </div>
 </div>
 

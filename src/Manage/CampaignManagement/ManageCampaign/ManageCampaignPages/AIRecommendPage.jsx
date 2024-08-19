@@ -49,7 +49,7 @@ const AIRecommendPage = () => {
 
   return (
     <div
-      class={` flex relative ${
+      className={` flex relative ${
         !expanded
           ? "left-[100px] w-[calc(100%-110px)]"
           : "left-[320px] w-[calc(100%-320px)]"
