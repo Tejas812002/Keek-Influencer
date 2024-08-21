@@ -2,47 +2,42 @@ import React from 'react';
 import SideBar, { SidebarItem, SidebarContext } from './SideBar';
 import { Settings, Headphones } from 'lucide-react';
 import { MdOutlineDashboardCustomize } from "react-icons/md";
-import { CgUserList } from "react-icons/cg"
 import { CgCrown } from "react-icons/cg";
 import { MdAttachMoney } from "react-icons/md";
-
+import { FiUser } from "react-icons/fi";
 import { Link } from 'react-router-dom';
 import { LuPieChart } from "react-icons/lu";
+import { IoDocumentTextOutline } from "react-icons/io5";
 
 
 const SidebarContent = () => {
   return (
     <div className="max-w-[340px] ">
       <SideBar>
-        <Link to={"/"}>
-          <SidebarItem
-            icon={<MdOutlineDashboardCustomize size={20} />}
-            text="Dashboard"
-          >
-            {/* <SidebarItem text="ROI Report" customClass="text-gray-600" />
-            <SidebarItem text="Audience Insights" customClass="text-gray-600" />
-            <SidebarItem
-              text="Manage Influencers"
-              customClass="text-gray-600"
-            /> */}
-          </SidebarItem>
+      <Link to={"/Dashboard"}>
+          <SidebarItem icon={<MdOutlineDashboardCustomize size={20} />} text="Dashboard" />
         </Link>
 
-        <Link to={"/CampaignManagement"}>
-          <SidebarItem icon={<CgCrown size={20} />} text="Campaign Management" />
+        <Link to={"/Opportunities"}>
+          <SidebarItem icon={<CgCrown size={20} />} text="Opportunities" />
         </Link>
 
 
-        <Link to={"/discoverInfluencers"}>
+        <Link to={"/Earnings"}>
           <SidebarItem
-            icon={<CgUserList size={20} />}
-            text="Discover Influencers"
+            icon={<MdAttachMoney size={20} />}
+            text="Earnings"
           />
         </Link>
   
-        <Link to={"/payments"}>
-          <SidebarItem icon={<MdAttachMoney size={20} />} text="Payments" />
+        <Link to={"/Profile"}>
+          <SidebarItem icon={<FiUser size={20} />} text="Profile" />
         </Link>
+
+        <Link to={"/Contracts"}>
+          <SidebarItem icon={<IoDocumentTextOutline size={20} />} text="Contracts" />
+        </Link>
+
         <Link to={"/Analytics"}>
           <SidebarItem icon={<LuPieChart size={20} />} text="Analytics" />
         </Link>
@@ -60,7 +55,7 @@ const SidebarContent = () => {
           <SidebarItem icon={<Settings size={20} />} text="Settings" />
         </Link>
         <Link to={"/Support"}>
-          <SidebarItem icon={<Headphones size={20} />} text="Support" />
+          <SidebarItem icon={<Headphones size={20} />} text="Help & Support" />
         </Link>
        
       </SideBar>
