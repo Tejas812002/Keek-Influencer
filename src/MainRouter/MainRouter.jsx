@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-
+import Dashboard from '../Manage/Dashboard/Dashboard';
 
 const MainRouter = () => {
   return (
@@ -8,23 +8,10 @@ const MainRouter = () => {
       <Routes>
         <Route
           path="/"
-          element={
-            <div className="h-screen w-screen flex items-center justify-center bg-slate-400">
-              {" "}
-              Dashboard
-            </div>
-          }
+          element={<Dashboard />}
         />
 
-<Route
-          path="/Dashboard"
-          element={
-            <div className="h-screen w-screen flex items-center justify-center bg-slate-400">
-              {" "}
-              Dashboard
-            </div>
-          }
-        />
+<Route path="/Dashboard" element={<Dashboard />} />
     
 
         <Route
