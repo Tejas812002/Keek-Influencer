@@ -52,7 +52,7 @@ const MainRouter = () => {
           }
         />
 
-{/* 
+
 <Route
           path="/Contracts"
           element={
@@ -61,7 +61,7 @@ const MainRouter = () => {
               Contracts
             </div>
           }
-        /> */}
+        />
 
 
 
