@@ -1,16 +1,9 @@
-import React, { useEffect } from "react";
 import { useContext, useState, useRef } from "react";
 import { Mycontext } from "../../../utils/Context";
 import Brand from "../../../Assets/logo.png";
 import { IoMdArrowRoundBack } from "react-icons/io";
 
 const AppCompModal = ({ closeModal, selectData }) => {
-  useEffect(() => {
-    document.body.style.overflowY = "hidden";
-    return () => {
-      document.body.style.overflowY = "scroll";
-    };
-  }, []);
 
   const contextState = useContext(Mycontext);
   const expanded = contextState.expanded;

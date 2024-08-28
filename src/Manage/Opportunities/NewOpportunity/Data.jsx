@@ -1,15 +1,10 @@
-import React, { useContext, useState, useEffect, useRef } from "react";
+import React, { useContext, useRef } from "react";
 import { Mycontext } from "../../../utils/Context";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { PiImageBold } from "react-icons/pi";
 
 const DataComp = ({ isModalVisible, setIsModalVisible, selectData }) => {
-  useEffect(() => {
-    document.body.style.overflowY = "hidden";
-    return () => {
-      document.body.style.overflowY = "scroll";
-    };
-  }, []);
+
   const modalref = useRef();
   const modalclose = (e) => {
     if (modalref.current === e.target) {

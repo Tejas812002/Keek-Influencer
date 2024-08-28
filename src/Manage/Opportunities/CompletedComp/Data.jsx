@@ -5,12 +5,6 @@ import { PiImageBold } from "react-icons/pi";
 
 const DataComp = ({ isModalVisible, setIsModalVisible, selectData }) => {
   const { campData, setCampData } = useContext(Mycontext);
-  useEffect(() => {
-    document.body.style.overflowY = "hidden";
-    return () => {
-      document.body.style.overflowY = "scroll";
-    };
-  }, []);
 
   const handleCancel = () => {
     setIsModalVisible(false);

@@ -4,12 +4,7 @@ import { IoMdArrowRoundBack } from "react-icons/io";
 import { PiImageBold } from "react-icons/pi";
 
 const OngoingPop = ({ isModalVisible, setIsModalVisible, selectData }) => {
-  useEffect(() => {
-    document.body.style.overflowY = "hidden";
-    return () => {
-      document.body.style.overflowY = "scroll";
-    };
-  }, []);
+
   const { campData, setCampData } = useContext(Mycontext);
 
   const handleCancel = () => {
