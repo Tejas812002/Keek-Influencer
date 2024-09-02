@@ -6,6 +6,7 @@ import NewOppcomp from "../Manage/Opportunities/NewOpportunity/NewoppComp";
 import AppliedComp from "../Manage/Opportunities/AppliedComp/AppliedComp";
 import CompltedComp from "../Manage/Opportunities/CompletedComp/CompletedComp";
 import OngoingComp from "../Manage/Opportunities/OngoingComp/OngoingComp";
+import InfluencerProfile from "../Manage/Profile/InfluencerProfile";
 
 
 
@@ -31,6 +32,18 @@ const MainRouter = () => {
           path="/Earnings"
           element={<Earning />}
         />
+
+      
+<Route
+          path="/Profile"
+          element={
+            <InfluencerProfile />
+          }
+        />    
+
+
+
+
         <Route
           path="/Analytics"
           element={
