@@ -9,6 +9,7 @@ import fb from "../../../Assets/Facebook.png";
 import yt from "../../../Assets/yt.png";
 import DataComp from "./Data";
 import NewProfileComp from "./NewProfile";
+import FilterData from "./FilterData";
 
 
 const NewOppcomp = () => {
@@ -18,8 +19,9 @@ const NewOppcomp = () => {
   const [isModalVisible,setIsModalVisible]=useState(false);
   const [isOpen, setIsOpen] =useState(false)
   const [selectIndex, setSelectIndex] = useState(null);
+  const [isFilter, setIsFilter] = useState(false)
 
-  
+   
 
 
   const Details = [
@@ -107,6 +109,9 @@ const NewOppcomp = () => {
     setSelectIndex(index);
   }
 
+   const handleFilter=()=>{
+    setIsFilter(!isFilter);
+   }
 
   return (
     <div
@@ -186,13 +191,21 @@ const NewOppcomp = () => {
               placeholder="Search Brands"
             />
           </div>
-          <div className="w-[106px] flex items-center gap-2 bg-[#f6f6f6] px-[16px] py-[8px] rounded-[10px]">
+          <div onClick={handleFilter}
+            className="w-[106px] cursor-pointer flex items-center gap-2 bg-[#f6f6f6] px-[16px] py-[8px] rounded-[10px] ">
             <span>
               <FiFilter className="w-[16px] h-[16px] text-[#797A7B]" />
             </span>
             <h1 className="text-[#797A7B] text-[16px] font-body font-semibold">Filter</h1>
           </div>
         </div>
+        <div>
+           
+           {/* filter data.... */}
+           {isFilter && (<FilterData isFilter={isFilter} setIsFilter={setIsFilter} />)}
+        
+       </div>
+      
  
 
       <div className="p-4 mt-[-2%] ml-1">
@@ -257,6 +270,9 @@ const NewOppcomp = () => {
          ))}
       </div>
           
+        
+       
+
         <div>
           <NewProfileComp selectData={Details[selectIndex]} setIsOpen={setIsOpen} isOpen={isOpen} />
         <DataComp  selectData={Details[selectIndex]} setIsModalVisible={setIsModalVisible} isModalVisible={isModalVisible} />

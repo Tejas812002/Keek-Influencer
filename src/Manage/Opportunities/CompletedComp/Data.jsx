@@ -6,6 +6,7 @@ import { PiImageBold } from "react-icons/pi";
 const DataComp = ({ isModalVisible, setIsModalVisible, selectData }) => {
   const { campData, setCampData } = useContext(Mycontext);
 
+
   const handleCancel = () => {
     setIsModalVisible(false);
   };

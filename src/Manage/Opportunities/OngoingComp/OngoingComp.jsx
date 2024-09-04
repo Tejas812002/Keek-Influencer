@@ -114,6 +114,7 @@ const OngoingComp = () => {
       addInfo:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio .",
     },
+    
   ];
 
   const handlCrocks = (index) => {

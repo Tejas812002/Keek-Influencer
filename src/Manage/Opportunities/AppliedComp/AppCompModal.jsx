@@ -1,9 +1,11 @@
+import React, { useEffect } from "react";
 import { useContext, useState, useRef } from "react";
 import { Mycontext } from "../../../utils/Context";
 import Brand from "../../../Assets/logo.png";
 import { IoMdArrowRoundBack } from "react-icons/io";
 
 const AppCompModal = ({ closeModal, selectData }) => {
+
 
   const contextState = useContext(Mycontext);
   const expanded = contextState.expanded;
