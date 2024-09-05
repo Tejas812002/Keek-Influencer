@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from "react";
 import { FiArrowUpRight } from "react-icons/fi";
 import { GoDotFill } from "react-icons/go";
+import Profile from "./Profile";
 
 import { IoIosArrowForward } from "react-icons/io";
 
@@ -12,6 +13,17 @@ const RecentCampaigns = ({ expanded }) => {
     { title: 'Save tree and more', company: 'Crocs', status: 'Applied', statusColor: '#FACC15' },
     { title: 'Save tree and more', company: 'Crocs', status: 'Ongoing', statusColor: '#22C55E' },
   ];
+
+
+  const [isOpen, setIsOpen] = useState(false); // State to handle popup visibility
+  const [selectData, setSelectData] = useState({}); // State to handle selected data
+
+    // Function to handle the click event and open the popup
+    const handleOpenProfile = (campaign) => {
+        setSelectData(campaign); // Set the selected data
+        setIsOpen(true); // Open the popup
+      };
+    
 
   return (
     <div>
@@ -35,7 +47,23 @@ const RecentCampaigns = ({ expanded }) => {
               <div className='w-[132px] h-[39px]'>
                 <h2 className='text-[14px] font-semibold font-body'>{campaign.title}</h2>
                 <div className='flex items-center'>
-                  <span className='text-[12px] font-normal font-body text-[#797A7B]'>{campaign.company}</span>
+
+
+                <button
+        className="text-[12px] font-normal font-body text-[#797A7B]"
+        onClick={() => handleOpenProfile(campaign)}
+      >
+        {campaign.company}
+      </button>
+
+      {/* Profile popup component */}
+      <Profile
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+        selectData={selectData}
+      />
+
+
                   <FiArrowUpRight className='text-[#0066FF] ml-1' />
                 </div>
               </div>
@@ -52,7 +80,7 @@ const RecentCampaigns = ({ expanded }) => {
           ))}
         </div>
         <div className='w-[126px] h-[21px] mt-5 flex items-center'>
-          <text className='text-[12px] w-[126px] h-[28px] font-medium font-body text-[#0062F5] flex items-center gap-[5px]'>See All Campaigns <span><IoIosArrowForward /></span></text>
+          <text className='text-[12px] w-[126px] h-[28px] font-medium font-body text-[#0062F5] flex items-center cursor-pointer gap-[5px]'>See All Campaigns <span><IoIosArrowForward /></span></text>
         </div>
 
       </div>
@@ -60,4 +88,4 @@ const RecentCampaigns = ({ expanded }) => {
   )
 }
 
-export default RecentCampaigns
+export default RecentCampaigns;

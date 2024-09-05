@@ -95,9 +95,9 @@ const RecentTransactions = ({ expanded }) => {
             <tbody className={`${expanded ? '  w-[744px]' : '  w-[950px]'} h-[360px]`}>
               {transactions.map((transaction, index) => (
                 <tr key={index} className="border-b h-[90px]">
-                  <td className="py-2 px-4 text-[14px] font-normal font-body">{transaction.id}</td>
-                  <td className="py-2 px-4 text-[14px] font-semibold font-body   ">
-                    <div className=''>
+                  <td className="py-2 px-4 w-[74px] h-[19px] text-[14px] font-normal font-body">{transaction.id}</td>
+                  <td className=" px-4 h-[35px] gap-[4px] font-semibold font-body   ">
+                    <div className='  text-[14px] '>
                       <span className='mt-7'>{transaction.name}</span>
                     </div>
                     {transaction.campaign && (
@@ -106,7 +106,7 @@ const RecentTransactions = ({ expanded }) => {
                       </div>
                     )}
                   </td>
-                  <td className="py-2 px-4 text-[14px] font-normal font-body text-[#191D23]">{transaction.date}</td>
+                  <td className=" text-[14px] w-[94px] h-[22px] font-normal font-body text-[#191D23]">{transaction.date}</td>
                   <td className="py-2 px-4">
                     <span className={`inline-flex items-center w-[80px] h-[20px] px-2  text-[10px] font-normal font-body rounded-full gap-1`}
                       style={{ backgroundColor: transaction.status === 'Pending' ? '#FFEAB0' : '#B0EDC7' }}>
@@ -116,7 +116,7 @@ const RecentTransactions = ({ expanded }) => {
                   </td>
                   <td className="py-2 px-2 pt-7 ">
                     <div className='w-[94px] h-[42px]'>
-                      <div className='flex gap-1'>
+                      <div className=' flex gap-1'>
                         <span className="text-[14px] font-semibold font-body">{transaction.amount}</span>
                         {transaction.arrowType === 'down' ? (
                           <FiArrowDownLeft className='text-[#22C55E] text-[22px]' />
