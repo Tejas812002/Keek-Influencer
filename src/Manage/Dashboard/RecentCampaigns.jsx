@@ -18,8 +18,12 @@ const RecentCampaigns = ({ expanded }) => {
 
       <div className={` h-[524px] bg-[#FFFFFF] rounded-[14px] p-4 ${expanded ? '  w-[280px]' : '  w-[320px]'}`}>
         <div className=' w-[177px] h-[48px] '>
-          <h2 className='text-[18px] font-semibold font-body'>Recent Campaigns</h2>
-          <h2 className='text-[12px] font-normal font-body text-[#797A7B]' >Some of the recent campaigns.</h2>
+          <div className='w-[161px] '>
+            <h2 className='text-[18px] font-semibold font-body h-[28px] ' >Recent Campaigns</h2>
+          </div>
+          <div className='w-[175px] '>
+            <h2 className='text-[12px] h-[20px] font-normal font-body text-[#797A7B]' >Some of the recent campaigns.</h2>
+          </div>
         </div>
 
         <div className={`${expanded ? 'w-[245px]' : 'w-[280px]'}  h-[364px] mt-7`}>
@@ -35,12 +39,12 @@ const RecentCampaigns = ({ expanded }) => {
                   <FiArrowUpRight className='text-[#0066FF] ml-1' />
                 </div>
               </div>
-              <div className='w-[] h-[]'>
+              <div className=''>
                 <span
-                  className={`items-center flex px-2 py-1 gap-1 rounded-[14px] text-[12px] font-normal font-body text-[#000000] ${campaign.status === 'Ongoing' ? 'bg-[#CFF9E3]' : 'bg-[#FFEAB0]'}`}
-                  >
-                   <GoDotFill style={{ color: campaign.status === 'Ongoing' ? '#22C55E' :  '#FACC15' }} />
-                   
+                  className={`items-center flex  px-2 py-[2px] gap-1 rounded-[14px] text-[12px] font-normal font-body text-[#000000] ${campaign.status === 'Ongoing' ? 'bg-[#CFF9E3]' : 'bg-[#FFEAB0]'}`}
+                >
+                  <GoDotFill style={{ color: campaign.status === 'Ongoing' ? '#22C55E' : '#FACC15' }} />
+
                   {campaign.status}
                 </span>
               </div>

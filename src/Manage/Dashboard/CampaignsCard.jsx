@@ -20,13 +20,13 @@ const CampaignsCard = ({expanded}) => {
         {cardData.map((item, index) => (
           <div
             key={index}
-            className={`h-[140px] bg-[#E2EDFF] rounded-[14px] px-9 py-5 ${expanded ? 'w-[280px]' : 'w-[320px]'} `}
+            className={`h-[140px] bg-[#E2EDFF] rounded-[14px] p-[10px] ${expanded ? 'w-[280px]' : 'w-[320px]'} `}
           >
-            <div className='w-[186px] h-[78px]  mt-2 '>
+            <div className='w-[186px] h-[78px] mt-4 ml-4 '>
               <div className='w-[186px] h-[40px]'>
                 <h2 className='text-[20px] font-semibold font-body'>{item.title} :</h2>
               </div>
-              <div className='w-[186px] h-[28px] mt-3'>
+              <div className='w-[186px] h-[28px] '>
                 <text className='text-[28px] font-semibold font-body text-[#0066FF]'>{item.value}</text>
               </div>
             </div>
