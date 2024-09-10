@@ -46,14 +46,14 @@ const SideBar = ({ children }) => {
             <ul className='flex-1 space-y-2 mt-10 pl-3'>{children}</ul>
           </SidebarContext.Provider>
 
-          <div className='border-t flex p-3'>
+          <div className='border-t  flex p-3'>
             <img src={profile} alt='' className={`w-10 h-10 rounded-md transition-all duration-150 ${expanded ? "w-10 " : "w-0 ml-2"}`} />
             <div className={`flex justify-between items-center overflow-hidden transition-all duration-150 ${expanded ? "w-52 ml-3" : "w-0"}`}>
               <div className='leading-4'>
                 <h4 className='font-semibold'>{User.name}</h4>
                 <span className='text-xs font-semibold text-gray-600'>{User.role}</span>
               </div>
-              <MoreVertical size={20} />
+              {/* <MoreVertical size={20} /> */}
             </div>
           </div>
         </nav>
@@ -80,7 +80,7 @@ export function SidebarItem({ icon, text, alert, customClass }) {
         ${isSelected ? "border-r-4 border-blue-500 text-blue-500" : ""} ${expanded ? "" : "h-10"} ${customClass}`}
       style={{ padding: expanded ? '0.25rem 0.5rem' : '0.25rem', width: expanded ? 'auto' : 'max-content' }}
     >
-      <div className='flex items-center'>
+      <div className='flex items-center  '>
         <div className='flex-shrink-0' style={{ width: '20px' }}>
           {icon}
         </div>
@@ -90,7 +90,7 @@ export function SidebarItem({ icon, text, alert, customClass }) {
         )}
       </div>
       {!expanded && (
-        <div className={`absolute left-full rounded-md px-2 py-1 ml-6 text-black text-sm invisible opacity-20 -translate-x-3 transition-all duration-150 group-hover:visible group-hover:opacity-100 group-hover:translate-x-0`}>
+        <div className={`absolute left-full  rounded-md px-2 py-1 ml-6 text-black text-sm invisible opacity-20 -translate-x-3 transition-all duration-150 group-hover:visible group-hover:opacity-100 group-hover:translate-x-0`}>
           {text}
         </div>
       )}
