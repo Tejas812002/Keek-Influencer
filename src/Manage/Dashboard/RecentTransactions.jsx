@@ -153,12 +153,10 @@ const RecentTransactions = ({ expanded }) => {
                   <td className=" text-[14px] w-[94px] h-[22px] font-normal font-body text-[#191D23]">{transaction.date}</td>
                   <td className="py-2 px-4">
                     <span className={`inline-flex items-center w-[80px] h-[20px] px-[8px] py-[0px]  text-[10px] font-normal font-body rounded-full gap-1`}
-                      style={{ backgroundColor: transaction.status === 'Pending' ? '#FFEAB0 ' : '#B0EDC7' }}>
+                      style={{ backgroundColor: transaction.status === 'Pending' ? '#FFEAB0  ' : '#B0EDC7' }}>
                       <GoDotFill style={{ color: transaction.status === 'Pending' ? '#FACC15 ' : '#22C55E' }} />
-                      <div className="w-[80px] h-[20px]  ">
 
                       {transaction.status}
-                      </div>
                     </span>
                   </td>
                   <td className="py-2 px-2 pt-7 ">
