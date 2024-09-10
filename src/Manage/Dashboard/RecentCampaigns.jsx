@@ -69,11 +69,12 @@ const RecentCampaigns = ({ expanded }) => {
               </div>
               <div className=''>
                 <span
-                  className={`items-center flex  px-2 py-[2px] gap-1 rounded-[14px] text-[12px] font-normal font-body text-[#000000] ${campaign.status === 'Ongoing' ? 'bg-[#CFF9E3]' : 'bg-[#FFEAB0]'}`}
+                  className={`items-center flex  px-[8px] py-[4px] gap-1 rounded-[14px] text-[12px] font-normal font-body text-[#000000] ${campaign.status === 'Ongoing' ? 'bg-[#B0EDC7] w-[76px] ' : 'bg-[#FFEAB0] w-[71px] '}`}
                 >
                   <GoDotFill style={{ color: campaign.status === 'Ongoing' ? '#22C55E' : '#FACC15' }} />
 
                   {campaign.status}
+                  
                 </span>
               </div>
             </div>
