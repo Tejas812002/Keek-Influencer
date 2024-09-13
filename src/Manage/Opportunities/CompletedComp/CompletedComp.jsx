@@ -144,11 +144,11 @@ const CompletedComp = () => {
             expanded ? "w-[1062px]" : "w-full"
           } h-[52px] justify-between items-center p-4 bg-white border-border`}
         >
-          <div className={``}>
-            <h1 className="text-[24px] font-semibold font-body">
+          <div className={` w-[666px] h-[52px]`}>
+            <h1 className="text-[24px] h-[28px] w-[163px] font-semibold font-body">
               Opportunities
             </h1>
-            <p className="text-[14px] font-normal font-body text-[#57595a]">
+            <p className="h-[20px] w-[666px]  text-[14px] font-normal font-body text-[#57595a]">
               Discover various brand campaigns —connect, collaborate, and
               elevate your influence to the next level!
             </p>
@@ -210,37 +210,37 @@ const CompletedComp = () => {
             <thead className="h-[40px]">
               <tr className="border-b">
                 <th className="text-[#797A7B] font-semibold text-[12px] px-3 text-start">
-                  <span className="w-[80px] h-[16px]"> CAMPAIGN ID </span>
+                  <div className="w-[80px] h-[16px]"> CAMPAIGN ID </div>
                 </th>
                 <th className="text-[#797A7B] font-semibold text-[12px] px-3 text-start">
-                  <span className="w-[102px] h-[16px]"> CAMPAIGN NAME </span>
+                  <div className="w-[102px] h-[16px]"> CAMPAIGN NAME </div>
                 </th>
                 <th className="text-[#797A7B] font-semibold text-[12px] px-3 text-start">
-                  <span className="w-[70px] h-[20px]"> PLATFORMS </span>
+                  <div className="w-[70px] h-[20px]"> PLATFORMS </div>
                 </th>
                 <th className="text-[#797A7B] font-semibold text-[12px] px-3 text-start">
-                  <span className="w-[97px] h-[20px]"> DURATION </span>
+                  <div className="w-[97px] h-[20px]"> DURATION </div>
                 </th>
                 <th className="text-[#797A7B] font-semibold text-[12px] px-3 text-start">
-                  <span className="w-[97px] h-[20px]"> EARNINGS </span>
+                  <div className="w-[97px] h-[20px]"> EARNINGS </div>
                 </th>
                 <th className="text-[#797A7B] font-semibold text-[12px] px-3 text-start">
-                  <span className="w-[47px] h-[20px]"> STATUS </span>
+                  <div className="w-[47px] h-[20px]"> STATUS </div>
                 </th>
               </tr>{" "}
             </thead>
             <tbody className="mt-2">
               {campaigns.map((campaign, index) => (
-                <tr key={index} className="border-b">
+                <tr key={index} className="border-b h-[108px]">
                   <td className="p-2 py-8">
-                    <span className="w-[67px] h-[22px]">{campaign.id}</span>
+                    <div className="w-[67px] h-[22px]">{campaign.id}</div>
                   </td>
                   <td>
                     <div className="py-8">
-                      <span className="font-normal text-base text-[#191D23] w-[162px] h-[22px]">
+                      <div className="font-normal text-base text-[#191D23] w-[162px] h-[22px]">
                         {" "}
                         {campaign.title}
-                      </span>
+                      </div>
                       <div
                         onClick={() => handleBrand(index)}
                         className="flex items-center gap-[1px] cursor-pointer"
@@ -255,22 +255,22 @@ const CompletedComp = () => {
                     </div>
                   </td>
                   <td className="font-normal text-base text-[#191D23] px-3 py-8">
-                    <span className="w-[103px] h-[22px]">
+                    <div className="w-[103px] h-[22px]">
                       {" "}
                       {campaign.platforms}{" "}
-                    </span>
+                    </div>
                   </td>
                   <td className="font-normal text-base text-[#191D23] px-3 py-8">
-                    <span className="w-[157px] h-[22px]">
+                    <div className="w-[157px] h-[22px]">
                       {" "}
                       {campaign.duration}{" "}
-                    </span>
+                    </div>
                   </td>
                   <td className="font-normal text-base text-[#191D23] px-3 py-8">
-                    <span className="w-[52px] h-[22px]">
+                    <div className="w-[52px] h-[22px]">
                       {" "}
                       {campaign.earnings}{" "}
-                    </span>
+                    </div>
                   </td>
                   <td className="px-3 py-8">
                     <div className="flex w-[100px] h-[24px] py-[2px] px-2 justify-center items-center  rounded-[14px] bg-[#D1E3FF]">
@@ -280,16 +280,19 @@ const CompletedComp = () => {
                       </span>
                     </div>
                   </td>
-                  <td className="flex items-center gap-[14px] px-3 py-8">
+                  <td className=" flex gap-2 px-3 py-8">
                     <button
                       className="text-[#06F] text-center font-sans text-sm not-italic font-normal leading-[100%] w-[79px]"
                       onClick={() => handleView(index)}
                     >
                       View Details
                     </button>
-                    <button className="flex h-[35px] px-4 justify-center items-center gap-[10px] rounded-lg border border-[#06F] bg-[#06F] text-[#FFFFFF]">
-                      View proof
-                    </button>
+                    <button
+                        className="w-[103px] h-[35px] px-[16px] rounded-[8px]  text-white  border-[#0066FF] font-normal text-[14px] bg-[#0066FF]"
+                       
+                      >
+                        View Proof
+                      </button>
                   </td>
                 </tr>
               ))}

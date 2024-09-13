@@ -136,17 +136,17 @@ const AppliedComp = () => {
           : "left-[320px] w-[calc(100%-320px)]"
       }  overflow-y-auto  bg-white space-y-4 p-4 `}
     >
-      <div className="bg-white w-full">
+      <div className="bg-[#FFFFFF] w-full">
         <div
           className={`flex ${
             expanded ? "w-[1062px]" : "w-full"
           } h-[52px] justify-between items-center p-4 bg-white border-border`}
         >
-          <div className={``}>
-            <h1 className="text-[24px] font-semibold font-body">
+          <div className={`w-[666px] h-[52px]`}>
+            <h1 className="text-[24px] h-[28px] w-[163px] font-semibold font-body">
               Opportunities
             </h1>
-            <p className="text-[14px] font-normal font-body text-[#57595a]">
+            <p className="h-[20px] w-[666px] text-[14px] font-normal font-body text-[#57595a]">
               Discover various brand campaigns —connect, collaborate, and
               elevate your influence to the next level!
             </p>
@@ -205,22 +205,22 @@ const AppliedComp = () => {
         {/* table content- */}
         <div className=" px-4">
           <table className={`${expanded ? "w-[1047px]" : "w-full"} mt-11`}>
-            <thead className="h-[40px]">
+            <thead className="h-[20px] w-[736px] ">
               <tr>
                 <th className="text-[#797A7B] font-semibold px-3  text-[12px] text-start">
-                  BRAND NAME
+                <div className="w-[80px] h-[16px]">  BRAND NAME</div>
                 </th>
                 <th className="text-[#797A7B] font-semibold px-3  text-[12px] text-start ">
-                  CAMPAIGN NAME
+                 <div className="w-[102px] h-[16px]"> CAMPAIGN NAME</div>
                 </th>
                 <th className="text-[#797A7B] font-semibold px-3  text-[12px] text-start ">
-                  PLATFORMS
+                  <div className="w-[70px] h-[20px]">PLATFORMS</div>
                 </th>
                 <th className="text-[#797A7B] font-semibold px-3  text-[12px] text-start ">
-                  APPLIED DATE
+                  <div className="w-[97px] h-[20px]">APPLIED DATE</div>
                 </th>
                 <th className="text-[#797A7B] font-semibold px-3  text-[12px] text-start ">
-                  STATUS
+                  <div className="w-[47px] h-[20px]">STATUS</div>
                 </th>
               </tr>{" "}
             </thead>
@@ -232,26 +232,27 @@ const AppliedComp = () => {
                     className="border-y border-[#D2D3D3] h-[99px] py-[32px]"
                   >
                     <td>
-                      <button onClick={() => handleBrand(index)}>
-                        <div className="flex px-3 ">
-                          <span className="font-normal text-base text-[#191D23]">
-                            {" "}
-                            {data.brandName}
-                          </span>
+                     <div className="" >
+                     <button onClick={() => handleBrand(index)} className="">
+                        <div className="flex w-[70px] h-[22px] ml-3  ">
+                        {data.brandName}
                           <span>
                             <FiArrowUpRight className="mt-1 text-[#0066FF]" />
                           </span>
                         </div>
                       </button>
+                     </div>
                     </td>
                     <td className="font-normal text-base text-[#191D23] px-3 ">
-                      {data.campaignName}
+                     <div className="w-[162px] h-[22px]">  
+                     {data.campaignName}
+                     </div>
                     </td>
                     <td className="font-normal text-base text-[#191D23] px-3 ">
-                      {data.platforms}
+                     <div className="w-[103px] h-[22px]"> {data.platforms}</div>
                     </td>
                     <td className="font-normal text-base text-[#191D23] px-3 ">
-                      {data.AppliedDate}
+                      <div className="w-[106px] h-[22px]">{data.AppliedDate}</div>
                     </td>
                     <td>
                       <div
@@ -275,7 +276,7 @@ const AppliedComp = () => {
                     </td>
                     <td>
                       <button
-                        className={`text-[#E42828] font-semibold text-[16px] ${
+                        className={`text-[#E42828] font-semibold text-[16px] w-[76px] h-[16px] ${
                           data.status === "Withdrawn"
                             ? "text-gray-400 cursor-not-allowed"
                             : ""

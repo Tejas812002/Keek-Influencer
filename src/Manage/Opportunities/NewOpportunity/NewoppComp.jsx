@@ -123,10 +123,13 @@ const NewOppcomp = () => {
     >
       <div className="bg-white  w-full">
         <div className={`flex ${expanded ? 'w-[1062px]':'w-full'} h-[52px] justify-between items-center p-4 bg-white border-border`}>
-          <div className={``}>
-            <h1 className="text-[24px] font-semibold font-body">Opportunities</h1>
-            <p className="text-[14px] font-normal font-body text-[#57595a]">
-              Discover various brand campaigns —connect, collaborate, and elevate your influence to the next level!
+        <div className={`w-[666px] h-[52px]`}>
+            <h1 className="text-[24px] h-[28px] w-[163px] font-semibold font-body">
+              Opportunities
+            </h1>
+            <p className="h-[20px] w-[666px]  text-[14px] font-normal font-body text-[#57595a]">
+              Discover various brand campaigns —connect, collaborate, and
+              elevate your influence to the next level!
             </p>
           </div>
         </div>
@@ -215,14 +218,14 @@ const NewOppcomp = () => {
           style={{ boxShadow: "2px 4px 14px 2px #00000040" }}
         >
          
-            <div  className={`flex items-center justify-between h-[92px] w-full  ${expanded ?'w-[961px]':'w-full'}`}>
+            <div  className={`flex items-center justify-between h-[92px]   ${expanded ?'w-[961px]':'w-full'}`}>
               <div className="mt-2">
                 <img src={data.logo} className="w-[90px] h-[90px]" />
               </div>
               {/* logo name and social icon */}
-              <div className="w-[264px] h-[90px]">
+              <div className="w-[264px] h-[90px] ml-[-6%] ">
                 <div className="w-[220px] h-[46px]">
-                  <h1 className="text-black text-[20px] font-semibold font-body">{data.title}</h1>
+                  <h1 className="text-black   text-[20px] font-semibold font-body">{data.title}</h1>
                   <p onClick={()=>handleBrand(index)} className="text-[16px] font-semibold font-body text-[#8E9090] cursor-pointer">{data.name}</p>
                 </div>
                 <div className="flex space-x-3 mt-5">
@@ -239,7 +242,7 @@ const NewOppcomp = () => {
                     </div>
                   )}
                   {data.socials.includes('youtube') && (
-                    <div className="w-[80px] flex items-center space-x-1 h-[26px] bg-[#f6f6f6] px-[8px] py-[6px] cursor-pointer rounded-[6px]">
+                    <div className="w-[80px] flex items-center space-x-1 h-[26px] bg-[#f6f6f6] px-[6px] py-[8px] cursor-pointer rounded-[6px]">
                       <img src={data.img3} className="w-[12px] h-[12px]" />
                       <p className="text-[10px] font-body font-normal text-[#1F2223]">Youtube</p>
                     </div>
@@ -248,10 +251,10 @@ const NewOppcomp = () => {
               </div>
               {/* location */}
               <div className="w-[273px] h-[91px]">
-                <p className="text-[14px] font-semibold font-body text-[#1F2223]">
+                <p className="text-[14px]  w-[273px] h-[19px] font-semibold font-body text-[#1F2223]">
                   <span className="font-semibold font-body text-[12px] text-[#797A7B]">LOCATION:</span> {data.location}
                 </p>
-                <p className="text-[14px] mt-8 font-semibold font-body text-[#1F2223]">
+                <p className="text-[14px]  w-[273px] h-[19px] mt-[42px] font-semibold font-body text-[#1F2223]">
                   <span className="font-semibold font-body text-[12px] text-[#797A7B]">DURATION:</span> {data.startDate} - {data.endDate}
                 </p>
               </div>

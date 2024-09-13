@@ -55,13 +55,13 @@ const AppCompModal = ({ closeModal, selectData }) => {
               </div>
             </div>
             <div className="py-2">
-              <p className="text-[12px] font-body font-normal text-[#797A7B]">
+              <p className=" w-[442px] h-[48px] text-[12px] font-body font-normal text-[#797A7B]">
                 {" "}
                 {selectData.description}{" "}
               </p>
             </div>
 
-            <div className="py-4">
+            <div className="py-2 w-[442px] h-[232px]">
               {/* Platform */}
               <div className="flex justify-between py-2">
                 <div className="text-[12px] font-body font-normal text-[#797A7B]">
@@ -138,7 +138,7 @@ const AppCompModal = ({ closeModal, selectData }) => {
               </div>
             </div>
 
-            <div>
+            <div className="w-[442px] h-[59px] my-3 ">
               <h1 className="text-[14px] font-body font-normal text-[#1F2223]">
                 Additional information
               </h1>
@@ -147,7 +147,7 @@ const AppCompModal = ({ closeModal, selectData }) => {
               </p>
             </div>
 
-            <div className="mt-6 flex gap-[28px] w-[437px]">
+            <div className="my-14 w-[442px] h-[35px] flex  gap-3">
               <button
                 onClick={() => closeModal(false)}
                 className="w-[116px] h-[35px] px-[16px] border text-[#0066FF] border-[#0066FF] rounded-[4px] "

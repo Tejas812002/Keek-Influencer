@@ -68,13 +68,13 @@ const DataComp = ({ isModalVisible, setIsModalVisible, selectData }) => {
               </div>
 
               <div className="py-2">
-                <p className="text-[12px] font-body font-normal text-[#797A7B]">
+                <p className=" w-[442px] h-[48px] text-[12px] font-body font-normal text-[#797A7B]">
                   {" "}
                   {selectData.description}{" "}
                 </p>
               </div>
 
-              <div className="py-4">
+              <div className="py-2 w-[442px] h-[232px] ">
                 {/* Platform */}
                 <div className="flex justify-between py-2">
                   <div className="text-[12px] font-body font-normal text-[#797A7B]">
@@ -153,7 +153,7 @@ const DataComp = ({ isModalVisible, setIsModalVisible, selectData }) => {
                 </div>
               </div>
 
-              <div>
+              <div className="w-[442px] h-[59px] my-3">
                 <h1 className="text-[14px] font-body font-normal text-[#1F2223]">
                   Additional information
                 </h1>
@@ -162,7 +162,7 @@ const DataComp = ({ isModalVisible, setIsModalVisible, selectData }) => {
                 </p>
               </div>
 
-              <div className="py-5 flex space-x-4">
+              <div className="my-14 w-[442px] h-[35px] flex  gap-3">
                 <button
                   onClick={handleCancel}
                   className="text-[14px] border-2 border-[#0066ff]  px-4 w-[128px] h-[35px] rounded-[4px] cursor-pointer font-body font-normal text-[#0066Ff]"

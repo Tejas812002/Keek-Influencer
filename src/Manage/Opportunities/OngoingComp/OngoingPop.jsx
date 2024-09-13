@@ -33,7 +33,7 @@ const OngoingPop = ({ isModalVisible, setIsModalVisible, selectData }) => {
         <div
           ref={modalref}
           onClick={modalclose}
-          className="fixed inset-0 h-[1600px]  top-[-6%] z-50 flex items-center justify-center bg-black bg-opacity-50"
+          className="fixed inset-0 h-[1600px]  top-[-2%] z-50 flex items-center justify-center bg-black bg-opacity-50"
         >
           <div className="bg-white absolute top-[5%] w-[529px] h-[606px] p-4 rounded-md">
             <div
@@ -62,16 +62,16 @@ const OngoingPop = ({ isModalVisible, setIsModalVisible, selectData }) => {
                 </div>
               </div>
 
-              <div className="py-2">
-                <p className="text-[12px] font-body font-normal text-[#797A7B]">
+              <div className="py-2 ">
+                <p className=" w-[442px] h-[48px] text-[12px] font-body font-normal text-[#797A7B]">
                   {" "}
                   {selectData.description}{" "}
                 </p>
               </div>
 
-              <div className="py-4">
+              <div className="py-2 w-[442px] h-[232px] ">
                 {/* Platform */}
-                <div className="flex justify-between py-2">
+                <div className="flex justify-between py-2 ">
                   <div className="text-[12px] font-body font-normal text-[#797A7B]">
                     Platform:
                   </div>
@@ -148,7 +148,7 @@ const OngoingPop = ({ isModalVisible, setIsModalVisible, selectData }) => {
                 </div>
               </div>
 
-              <div>
+              <div className="w-[442px] h-[59px] my-3 ">
                 <h1 className="text-[14px] font-body font-normal text-[#1F2223]">
                   Additional information
                 </h1>
@@ -157,13 +157,15 @@ const OngoingPop = ({ isModalVisible, setIsModalVisible, selectData }) => {
                 </p>
               </div>
 
-              <div className="py-5 flex space-x-4">
+              <div className="my-14 w-[442px] h-[35px] flex  gap-3">
+                
                 <button
                   onClick={handleCancel}
                   className="text-[14px] border-2 border-[#0066ff]  px-4 w-[128px] h-[35px] rounded-[4px] cursor-pointer font-body font-normal text-[#0066Ff]"
                 >
                   Cancel
                 </button>
+                
                 <button
                   className=" text-white text-[14px] font-body font-normal bg-[#0066ff]  px-[16px] w-[300px] h-[35px] rounded-[4px]"
                   onClick={handleApply}
