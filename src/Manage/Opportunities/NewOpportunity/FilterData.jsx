@@ -1,7 +1,10 @@
-import React, { useState } from 'react';
+import React, { useContext,useState } from 'react';
 import { MdKeyboardArrowDown } from 'react-icons/md';
+import { Mycontext } from "../../../utils/Context";
 
 const FilterData = ({ isFilter, setIsFilter }) => {
+  const contextState = useContext(Mycontext);
+  const expanded = contextState.expanded;
   const [openDropdown, setOpenDropdown] = useState(null); // Manages which dropdown is open
   const [selectedFilters, setSelectedFilters] = useState({
     platforms: [],
@@ -65,7 +68,7 @@ const FilterData = ({ isFilter, setIsFilter }) => {
   return (
     <>
       {isFilter && (
-        <div className='fixed inset-0 mt-[14%]  mr-[2%] flex justify-end items-start z-50'>
+        <div className={`fixed inset-0 mt-[14%] ${expanded ? "mr-[10%]" : "mr-10"}  flex justify-end items-start z-50`}>
           <div className='w-[323px] h-[446px] p-4 border-2 rounded-md bg-white shadow-md'>
             <div className='border-b-2 w-[289px] h-[24px]'>
               <div className='w-[289px] flex items-center justify-between h-[16px]'>

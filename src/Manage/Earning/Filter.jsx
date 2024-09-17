@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, {useContext, useState } from "react";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa"; 
 import { TbCheckbox } from "react-icons/tb";
 import { MdOutlineCheckBoxOutlineBlank } from "react-icons/md";
 import { RxCross2 } from "react-icons/rx";
+import { Mycontext } from "../../utils/Context";
+
 
 const Filter = ({ isModalVisible, setIsModalVisible, onApplyFilters }) => {
   // const [startDate, setStartDate] = useState(null);
@@ -50,10 +52,13 @@ const Filter = ({ isModalVisible, setIsModalVisible, onApplyFilters }) => {
     setIsModalVisible(false);
   };
 
+  const contextState = useContext(Mycontext);
+  const expanded = contextState.expanded;
+
   return (
     <>
       {isFilterVisible && (
-        <div className="w-[291px] h-[354px] px-4 pt-[17px] pb-[18px] bg-white flex flex-col items-center">
+        <div className= {`w-[291px] h-[354px] px-4 pt-[17px]  ${!expanded ? " mr-[10px]" :"-ml-[30%] "}  pb-[18px] bg-white flex flex-col items-center`}>
           <div className="w-full flex flex-col gap-5">
             <div className="flex justify-between items-center relative">
               <div className="text-center text-[#344053] text-xs font-normal font-['Open Sans']">

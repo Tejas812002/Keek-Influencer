@@ -91,8 +91,9 @@ const InfluencerProfile = () => {
         !expanded
           ? "left-[100px] w-[calc(100%-110px)]"
           : "left-[320px] w-[calc(100%-320px)]"
-      } overflow-y-auto bg-white pb-[115px]`}
+      } overflow-y-auto `}
     >
+        <div className={`bg-[#FFFFFF] ${expanded ? 'w-[1120px]':'w-full'} h-[900px] `}>
       <div className="mr-[74px] mt-[45px] ml-[21px]">
         <div className="flex items-center justify-between mb-[42px]">
           <div className="flex items-center gap-[11px]">
@@ -146,7 +147,7 @@ const InfluencerProfile = () => {
         </div>
         <hr className="w-full" />
         {editableData.map((item, index) => (
-          <div key={index}>
+          <div   key={index}>
             <div
               className={`flex py-8 gap-x-[62px] ${
                 editable &&
@@ -252,6 +253,8 @@ const InfluencerProfile = () => {
             <hr className="w-full" />
           </div>
         ))}
+      </div>
+
       </div>
     </div>
   );

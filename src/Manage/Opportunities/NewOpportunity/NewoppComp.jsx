@@ -119,9 +119,9 @@ const NewOppcomp = () => {
         !expanded
           ? "left-[100px] w-[calc(100%-110px)]"
           : "left-[320px] w-[calc(100%-320px)]"
-      } overflow-y-auto bg-white space-y-4 p-4`}
+      } overflow-y-auto  space-y-4 p-4`}
     >
-      <div className="bg-white  w-full">
+      <div className={`bg-[#FFFFFF] ${expanded ? 'w-[1120px]':'w-full'}`}>
         <div className={`flex ${expanded ? 'w-[1062px]':'w-full'} h-[52px] justify-between items-center p-4 bg-white border-border`}>
         <div className={`w-[666px] h-[52px]`}>
             <h1 className="text-[24px] h-[28px] w-[163px] font-semibold font-body">
@@ -195,7 +195,7 @@ const NewOppcomp = () => {
             />
           </div>
           <div onClick={handleFilter}
-            className="w-[106px] cursor-pointer flex items-center gap-2 bg-[#f6f6f6] px-[16px] py-[8px] rounded-[10px] ">
+            className={`w-[106px] ${expanded ? " " : "mr-10 " } cursor-pointer flex items-center gap-2 bg-[#f6f6f6] px-[16px] py-[8px] rounded-[10px] `}>
             <span>
               <FiFilter className="w-[16px] h-[16px] text-[#797A7B]" />
             </span>

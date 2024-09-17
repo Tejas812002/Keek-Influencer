@@ -126,9 +126,9 @@ const Earning = () => {
 
   return (
     <div
-      className={`flex relative ${!expanded ? "left-[100px] w-[calc(100%-110px)]" : "left-[320px] w-[calc(100%-320px)]"} overflow-y-auto bg-white space-y-4 p-4`}
+      className={`flex relative ${!expanded ? "left-[100px] w-[calc(100%-110px)]" : "left-[320px] w-[calc(100%-320px)]"} overflow-y-auto  space-y-4 p-4`}
     >
-      <div className="bg-white w-full">
+   <div className={`bg-[#FFFFFF] ${expanded ? 'w-[1120px]':'w-full'}`}>
         {/* Header and other UI elements */}
   <div className="flex w-full justify-between items-center p-4 bg-white border-border">
           <div>

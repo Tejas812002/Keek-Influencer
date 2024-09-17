@@ -134,9 +134,9 @@ const AppliedComp = () => {
         !expanded
           ? "left-[100px] w-[calc(100%-110px)]"
           : "left-[320px] w-[calc(100%-320px)]"
-      }  overflow-y-auto  bg-white space-y-4 p-4 `}
+      }  overflow-y-auto  space-y-4 p-4 `}
     >
-      <div className="bg-[#FFFFFF] w-full">
+      <div className={`bg-[#FFFFFF] ${expanded ? 'w-[1120px]':'w-full'}`} >
         <div
           className={`flex ${
             expanded ? "w-[1062px]" : "w-full"
