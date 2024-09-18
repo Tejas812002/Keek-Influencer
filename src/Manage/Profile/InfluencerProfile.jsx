@@ -103,7 +103,7 @@ const InfluencerProfile = () => {
               className="w-[120px] h-[120px] rounded-full overflow-hidden object-fill"
             />
             <div>
-              <div className="flex flex-col gap-[18px]">
+              <div className="flex flex-col w-[210px] h-[93px] gap-[18px]">
                 <h2 className="text-[22px] font-semibold">Gautam Sachdeva</h2>
                 <div className="flex items-center">
                   <IoMdStar size={"1.4em"} className="text-[#06F]" />
@@ -149,20 +149,22 @@ const InfluencerProfile = () => {
         {editableData.map((item, index) => (
           <div   key={index}>
             <div
-              className={`flex py-8 gap-x-[62px] ${
+              className={`flex  w-[1029px]  py-8 gap-x-[62px] ${
                 editable &&
                 (item.name === "Niche" || item.name === "Social profiles") &&
                 "justify-between"
               } `}
             >
-              <div className="w-[256px]">
-                <h3 className="text-lg font-semibold text-[#06F]">
+           
+              <div className="w-[292px] h-[40px]  ">
+                <h3 className="text-[18px] h-[19px] font-semibold text-[#06F]">
                   {item.name}
                 </h3>
-                <span className="text-[#797A7B] text-sm">
+                <h4 className="text-[#797A7B]  h-[19px] text-[14px] ">
                   {item.description}
-                </span>
+                </h4>
               </div>
+              
               <div
                 className={`flex ${
                   item.name === "Niche"
@@ -203,9 +205,9 @@ const InfluencerProfile = () => {
                     </div>
                   ))
                 ) : editable ? (
-                  <div className="text-[#1F2223] text-justify">
+                  <div className="text-[#1F2223] w-[692px]   text-justify">
                     <textarea
-                      className=" resize-none px-[17px] py-[22px] bg-[#EAEAEA] w-[692px] h-[120px] rounded-lg overflow-hidden"
+                      className=" resize-none  px-[17px] py-[22px] text-[16px] bg-[#EAEAEA] w-[672px] h-[76px] rounded-lg overflow-hidden"
                       name=""
                       id=""
                       onChange={(e) => handleInputChange(index, e.target.value)}
