@@ -126,11 +126,11 @@ const Earning = () => {
 
   return (
     <div
-      className={`flex relative ${!expanded ? "left-[100px] w-[calc(100%-110px)]" : "left-[320px] w-[calc(100%-320px)]"} overflow-y-auto  space-y-4 p-4`}
+      className={`flex relative ${!expanded ? "left-[100px] w-[calc(100%-110px)]" : "left-[320px] w-[calc(100%-320px)]"} overflow-y-auto  space-y-4 `}
     >
    <div className={`bg-[#FFFFFF] ${expanded ? 'w-[1120px]':'w-full'}`}>
         {/* Header and other UI elements */}
-  <div className={`flex ${expanded ? 'w-[1062px]':'w-full'} h-[52px]  justify-between items-center p-[4px] bg-white border-border`}>
+  <div className={`flex ${expanded ? 'w-[1062px]':'w-full'} h-[52px]  justify-between items-center ml-8 mt-8 p-[4px] bg-white border-border`}>
           <div className=" w-[753px] ">
             <h1 className="text-2xl w-[100px] h-[28px] font-bold text-foreground">Earnings</h1>
             <p className="text-muted-foreground h-[20] text-sm">
@@ -198,7 +198,7 @@ const Earning = () => {
         {/* Table and Pagination */}
 <span className= {`  ${expanded ? "w-[1052px]" : "w-full"} h-[566px]`}>
 
-        <div className="flex flex-col md:flex-row mt-4 text-start items-start md:items-center justify-between ml-2">
+        <div className="flex flex-col md:flex-row mt-4 text-start items-start md:items-center justify-between ml-4 ">
           <table className="w-full">
           <thead>
             <tr className="border-b-2 h-[36px] ">
