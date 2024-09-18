@@ -130,24 +130,27 @@ const Earning = () => {
     >
    <div className={`bg-[#FFFFFF] ${expanded ? 'w-[1120px]':'w-full'}`}>
         {/* Header and other UI elements */}
-  <div className="flex w-full justify-between items-center p-4 bg-white border-border">
-          <div>
-            <h1 className="text-2xl font-bold text-foreground">Earnings</h1>
-            <p className="text-muted-foreground text-sm">
+  <div className={`flex ${expanded ? 'w-[1062px]':'w-full'} h-[52px]  justify-between items-center p-[4px] bg-white border-border`}>
+          <div className=" w-[753px] ">
+            <h1 className="text-2xl w-[100px] h-[28px] font-bold text-foreground">Earnings</h1>
+            <p className="text-muted-foreground h-[20] text-sm">
               Manage your transactions effortlessly—secure, seamless payments
               with ease!
             </p>
           </div>
-          <button>
-            <div class="w-[126px] h-10 ml-[250px] bg-neutral-100 rounded-lg justify-center items-center gap-3 inline-flex px-[20px] py-[14px]">
+
+
+
+          <div className={`flex   gap-[24px] w-[294px] h-[40px] ${expanded ? "mr-2" : "mr-16"} `}>
+          
+          <div class="w-[126px] h-[40px] py-[14px] px-[20px]  bg-neutral-100 rounded-lg justify-center items-center gap-3 inline-flex">
               <div class=" relative mt-1 ml-1 text-black ">
-                <CiWallet className="" size={25} />
+                <CiWallet className="w-[21.66px] h-[20px] " />
               </div>
-              <div class="text-black text-base font-semibold font-['Open Sans']">
+              <div class="text-black w-[46px] h-[22px] text-[16px]  text-base font-semibold font-['Open Sans']">
                 $5000
               </div>
             </div>
-          </button>
 
 
           <button
@@ -156,18 +159,21 @@ const Earning = () => {
           >
           Withdraw Funds
           </button>
+
+          </div>
         </div>
 
       
 
-        <div class="w-full h-[45px]  justify-between items-center inline-flex ml-4 mt-2">
+              <div class={` ${expanded ? "w-[1037px]" : "w-full"}  h-[45px]   justify-between items-center inline-flex ml-8 mt-6`}>
+
           <div class="text-[#1f2223] text-base font-semibold font-['Open Sans'] leading-[19px]">
             Transactions :
           </div>
           <div>
-            <button
+          <button
               onClick={toggleModal}
-              class="px-10 py-2 bg-[#f6f6f6] w-[106px] h-[45px] mr-8 rounded-[10px] justify-center items-center gap-2.5 flex"
+              class={`px-[16px] py-[8px] bg-[#f6f6f6] w-[106px] h-[45px] ${expanded ? "mr-2" : "mr-[6vw] "}    rounded-[10px] justify-center items-center gap-2.5 flex`}
             >
               <div class="w-4 h-4 text-[#797a7b] relative">
                 <LuFilter />
@@ -190,27 +196,45 @@ const Earning = () => {
         </div>
 
         {/* Table and Pagination */}
+<span className= {`  ${expanded ? "w-[1052px]" : "w-full"} h-[566px]`}>
+
         <div className="flex flex-col md:flex-row mt-4 text-start items-start md:items-center justify-between ml-2">
           <table className="w-full">
           <thead>
             <tr className="border-b-2 h-[36px] ">
                 <th className="border-zinc-300 font-body text-[#797A7B] text-[12px] font-semibold text-start p-2 pb-[20px]">
+                <div className=' w-[103px] h-[16px]'>
                   INVOICE NUMBER
+                  </div>
+
                 </th>
                 <th className="border-zinc-300 font-body text-[#797A7B] text-[12px] font-semibold text-start p-2 pb-[20px]">
-                  TRANSACTION NAME
+                <div className=' w-[122px] h-[16px]'>
+
+TRANSACTION NAME
+</div>
                 </th>
                 <th className="border-zinc-300 font-body text-[#797A7B] text-[12px] font-semibold text-start p-2 pb-[20px]">
+                <div className=' w-[80px] h-[16px]'>
+                  
                   BILLING DATE
+                  </div>
                 </th>
                 <th className="border-zinc-300 font-body text-[#797A7B] text-[12px] font-semibold text-start p-2 pb-[20px]">
-                  TIME
+                <div className=' w-[29px] h-[16px]'>
+                  Time
+                  </div>
                 </th>
                 <th className="border-zinc-300 font-body text-[#797A7B] text-[12px] font-semibold text-start p-2 pb-[20px]">
+                <div className=' w-[44px] h-[16px]'>
                   STATUS
+                  </div>
                 </th>
                 <th className="border-zinc-300 font-body text-[#797A7B] text-[12px] font-semibold text-start p-2 pl-6 pb-[20px]">
+                <div className=' w-[54px] h-[16px]'>
+                  
                   AMOUNT
+                  </div>
                 </th>
               </tr>
             </thead>
@@ -219,31 +243,42 @@ const Earning = () => {
                 <React.Fragment key={index}>
                <tr className="border-b-2 h-[91px]">
                     <td className="border-zinc-300 text-[16px] font-normal font-body p-2">
-                      {campaign.id}
+                    <div className="w-[84px] h-[22px] ">
+
+{campaign.id}
+</div>
                     </td>
                     <td className=" border-zinc-300 text-[16px] font-normal font-body p-2">
-                      <div class="text-[#191d23] text-base font-semibold mt-2">
+                    <div class="text-[#191d23] w-[193px] h-[22px] text-base font-semibold mt-2">
+                          
                         {campaign.name}
+
                       </div>
-                      <div class="h-3 text-[#797a7b] text-xs ">
+                      <div class="h-3 text-[#797a7b] w-[193px] h-[12px] text-[12px]">
                         {campaign.description}
                       </div>
                     </td>
                     <td className="border-zinc-300 text-[16px] font-normal font-body p-2">
-                      {campaign.billDate}
+                    <div className="w-[94px] h-[22px] ">
+
+{campaign.billDate}
+</div>
                     </td>
                     <td className="border-zinc-300 text-[16px] font-normal font-body p-2">
-                      {campaign.time}
+                    <div className="w-[42px] h-[22px] ">
+
+{campaign.time}
+</div>
                     </td>
                     <td className="border-zinc-300 w-[80px] h-[20px] text-[16px] font-semibold p-2">
-                      <span
+                    <span
                         className={`font-body   text-[10px]  justify-center items-center flex gap-1 rounded-full text-black ${
                           campaign.status === "Completed"
-                          ? "bg-[#B0EDC7] text-green-700 w-[80px] h-[20px] px-[6px] py-[0px]"
+                          ? "bg-[#B0EDC7] text-green-700 w-[80px] h-[20px] px-[8px] py-[0px]"
                           : campaign.status === "Failed"
-                          ? "bg-[#FFBFC3] text-red-700 w-[63px] h-[20px] px-[2px] py-[0px]"
+                          ? "bg-[#FFBFC3] text-red-700 w-[63px] h-[20px] px-[6px] py-[0px]"
                           : campaign.status === "Pending"
-                          ? "bg-[#FFEAB0] text-yellow-700 w-[63px] h-[20px] px-[2px] py-[0px]"
+                          ? "bg-[#FFEAB0] text-yellow-700 w-[63px] h-[20px] px-[6px] py-[0px]"
                           : "bg-[#E3EEFF] text-[#0066FF] w-[120px]"
                         }`}
                       >
@@ -251,11 +286,11 @@ const Earning = () => {
                         <GoDotFill
                           className={`w-[10px] h-[10px] ${
                             campaign.status === "Completed"
-                            ? "text-[#22C55E]"
+                            ? "text-green-700"
                             : campaign.status === "Failed"
-                            ? "text-[#FF424C]"
+                            ? "text-red-700"
                               : campaign.status === "Pending"
-                              ? "text-[#FACC15]"
+                              ? "text-yellow-700"
                               : "text-[#0066FF]"
                           }`}
                           />
@@ -265,7 +300,9 @@ const Earning = () => {
 
 
                     <td className="border-zinc-300 text-[16px] font-normal font-body p-2">
-                      <div className="flex text-[#191d23] text-base font-semibold mt-2">
+                    <div className="w-[92px] h-[42px]">
+                     
+                      <div className="flex w-[92px] h-[22px] text-[#191d23] text-base font-semibold mt-2">
                         {campaign.amount}
                         {campaign.name === "Received from Campaign" ? (
                         <GoArrowDownLeft className="w-[22px] h-[22px] text-[#52C41A] relative ml-1" />
@@ -273,14 +310,17 @@ const Earning = () => {
                         <GoArrowUpRight className="w-[22px] h-[22px] text-[#797a7b] relative ml-1" />
                       )}
                       </div>
+
                       <div class="text-[#797a7b] text-xs ">
                         Balance: {campaign.totalAmount}
                       </div>
+                      </div>
+
                     </td>
 
                     <td className="border-zinc-300 p-2">
                       <button
-                        className="text-[#0066FF] flex items-center font-body text-[14px] font-normal cursor-pointer"
+                        className="text-[#0066FF] w-[84px] h-[12px] flex items-center font-body text-[14px] font-normal cursor-pointer"
                         onClick={() => toggleDetails(index)}
                       >
                         View Invoice
@@ -292,29 +332,33 @@ const Earning = () => {
             </tbody>
           </table>
         </div>
+        </span>
 
-        <nav className="flex mt-6 items-center justify-end space-x-4 p-4">
-          <ul className="pagination flex space-x-2">
+   
+        <nav className=" flex left-[83%] relative w-[130px] h-[20px]   text-[14px] mt-6 items-center   p-4">
+          <ul className="pagination flex ">
             <li className="page-item">
               <button
                 onClick={prePage}
                 className="bg-secondary text-secondary-foreground hover:bg-secondary/80 p-2 rounded-lg"
               >
-              <span>
-                  {" "}
+                <span>
                   <IoIosArrowBack className="text-[#797A7B]" />
                 </span>
               </button>
             </li>
-            <span className="mt-1">
+            <span className="mt-1   flex flex-row">
               {currentPage} of {npage}
             </span>
+
             <li className="page-item">
               <button
                 onClick={nextPage}
                 className="bg-secondary text-secondary-foreground hover:bg-secondary/80 p-2 rounded-lg"
               >
-                <IoIosArrowForward />
+                <span>
+                  <IoIosArrowForward  />
+                </span>
               </button>
             </li>
           </ul>
