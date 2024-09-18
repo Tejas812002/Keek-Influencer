@@ -89,10 +89,16 @@ const Earning = () => {
 
   const handleApplyFilters = (filters) => {
     console.log("Filters Applied:", filters);
-    // Apply filters here
-    if (filters.includes("Paid")) {
-      setSelectedFilters([...filters.filter(filter => filter !== "Paid"), "Completed"]);
+  
+    // Check if "Paid" or "Deposit" is selected
+    if (filters.includes("Paid") || filters.includes("Deposit")) {
+      // Remove "Paid" and "Deposit" from the filters and add "Completed"
+      const updatedFilters = filters.filter(
+        (filter) => filter !== "Paid" && filter !== "Deposit"
+      );
+      setSelectedFilters([...updatedFilters, "Completed"]);
     } else {
+      // Otherwise, just set the selected filters as they are
       setSelectedFilters(filters);
     }
   };
@@ -141,7 +147,7 @@ const Earning = () => {
 
 
 
-          <div className={`flex   gap-[24px] w-[294px] h-[40px] ${expanded ? "mr-2" : "mr-16"} `}>
+          <div className={`flex   gap-[24px] w-[294px] h-[40px] ${expanded ? "mr-8" : "mr-20"} `}>
           
           <div class="w-[126px] h-[40px] py-[14px] px-[20px]  bg-neutral-100 rounded-lg justify-center items-center gap-3 inline-flex">
               <div class=" relative mt-1 ml-1 text-black ">
@@ -173,7 +179,7 @@ const Earning = () => {
           <div>
           <button
               onClick={toggleModal}
-              class={`px-[16px] py-[8px] bg-[#f6f6f6] w-[106px] h-[45px] ${expanded ? "mr-2" : "mr-[6vw] "}    rounded-[10px] justify-center items-center gap-2.5 flex`}
+              class={`px-[16px] py-[8px] bg-[#f6f6f6] w-[106px] h-[45px] ${expanded ? "ml-[2vw]" : "mr-[4.5vw] "}    rounded-[10px] justify-center items-center gap-2.5 flex`}
             >
               <div class="w-4 h-4 text-[#797a7b] relative">
                 <LuFilter />
