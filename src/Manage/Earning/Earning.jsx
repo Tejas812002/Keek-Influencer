@@ -3,7 +3,7 @@ import { Mycontext } from "../../utils/Context";
 import { useLocation } from "react-router-dom";
 import { LuFilter } from "react-icons/lu";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
-import { FaCircleDot } from "react-icons/fa6";
+import { GoDotFill } from "react-icons/go";
 import { GoArrowDownLeft, GoArrowUpRight } from "react-icons/go";
 import { CiWallet } from "react-icons/ci";
 import Filter from './Filter';
@@ -139,9 +139,9 @@ const Earning = () => {
             </p>
           </div>
           <button>
-            <div class="w-[126px] h-10 ml-[324px] bg-neutral-100 rounded-lg justify-center items-center gap-3 inline-flex">
+            <div class="w-[126px] h-10 ml-[250px] bg-neutral-100 rounded-lg justify-center items-center gap-3 inline-flex px-[20px] py-[14px]">
               <div class=" relative mt-1 ml-1 text-black ">
-                <CiWallet />
+                <CiWallet className="" size={25} />
               </div>
               <div class="text-black text-base font-semibold font-['Open Sans']">
                 $5000
@@ -149,11 +149,12 @@ const Earning = () => {
             </div>
           </button>
 
+
           <button
-            className="bg-[#06F] h-[40px] text-white px-4 py-2.5 text-primary-foreground flex items-center hover:bg-primary/80 rounded-lg whitespace-nowrap"
-            style={{ width: "auto", paddingLeft: "12px", paddingRight: "12px" }} 
+            className="bg-[#06F] text-[16px] h-[40px] w-[159px] text-white px-[20px] py-[14px] text-primary-foreground flex items-center hover:bg-primary/80 rounded-lg whitespace-nowrap"
+            
           >
-            <span className="mr-2 text-3xl">+</span> Withdraw Funds
+          Withdraw Funds
           </button>
         </div>
 
@@ -191,24 +192,24 @@ const Earning = () => {
         {/* Table and Pagination */}
         <div className="flex flex-col md:flex-row mt-4 text-start items-start md:items-center justify-between ml-2">
           <table className="w-full">
-            <thead>
-            <tr className="border-b-2 h-[91px]">
-                <th className="border-zinc-300 font-body text-[#797A7B] text-[12px] font-semibold text-start p-2">
+          <thead>
+            <tr className="border-b-2 h-[36px] ">
+                <th className="border-zinc-300 font-body text-[#797A7B] text-[12px] font-semibold text-start p-2 pb-[20px]">
                   INVOICE NUMBER
                 </th>
-                <th className="border-zinc-300 font-body text-[#797A7B] text-[12px] font-semibold text-start p-2">
+                <th className="border-zinc-300 font-body text-[#797A7B] text-[12px] font-semibold text-start p-2 pb-[20px]">
                   TRANSACTION NAME
                 </th>
-                <th className="border-zinc-300 font-body text-[#797A7B] text-[12px] font-semibold text-start p-2">
+                <th className="border-zinc-300 font-body text-[#797A7B] text-[12px] font-semibold text-start p-2 pb-[20px]">
                   BILLING DATE
                 </th>
-                <th className="border-zinc-300 font-body text-[#797A7B] text-[12px] font-semibold text-start p-2">
+                <th className="border-zinc-300 font-body text-[#797A7B] text-[12px] font-semibold text-start p-2 pb-[20px]">
                   TIME
                 </th>
-                <th className="border-zinc-300 font-body text-[#797A7B] text-[12px] font-semibold text-start p-2">
+                <th className="border-zinc-300 font-body text-[#797A7B] text-[12px] font-semibold text-start p-2 pb-[20px]">
                   STATUS
                 </th>
-                <th className="border-zinc-300 font-body text-[#797A7B] text-[12px] font-semibold text-start p-2">
+                <th className="border-zinc-300 font-body text-[#797A7B] text-[12px] font-semibold text-start p-2 pl-6 pb-[20px]">
                   AMOUNT
                 </th>
               </tr>
@@ -234,32 +235,34 @@ const Earning = () => {
                     <td className="border-zinc-300 text-[16px] font-normal font-body p-2">
                       {campaign.time}
                     </td>
-                    <td className="border-zinc-300 text-[16px] font-normal p-2">
+                    <td className="border-zinc-300 w-[80px] h-[20px] text-[16px] font-semibold p-2">
                       <span
-                        className={`font-body text-[14px] p-1 justify-center items-center flex gap-2 rounded-full text-black ${
+                        className={`font-body   text-[10px]  justify-center items-center flex gap-1 rounded-full text-black ${
                           campaign.status === "Completed"
-                            ? "bg-green-100 text-green-700 w-[120px]"
-                            : campaign.status === "Failed"
-                            ? "bg-red-100 text-red-700 w-[100px]"
-                            : campaign.status === "Pending"
-                            ? "bg-yellow-100 text-yellow-700 w-[110px]"
-                            : "bg-[#E3EEFF] text-[#0066FF] w-[90px]"
+                          ? "bg-[#B0EDC7] text-green-700 w-[80px] h-[20px] px-[6px] py-[0px]"
+                          : campaign.status === "Failed"
+                          ? "bg-[#FFBFC3] text-red-700 w-[63px] h-[20px] px-[2px] py-[0px]"
+                          : campaign.status === "Pending"
+                          ? "bg-[#FFEAB0] text-yellow-700 w-[63px] h-[20px] px-[2px] py-[0px]"
+                          : "bg-[#E3EEFF] text-[#0066FF] w-[120px]"
                         }`}
                       >
-                        <FaCircleDot
+                        
+                        <GoDotFill
                           className={`w-[10px] h-[10px] ${
                             campaign.status === "Completed"
-                              ? "text-green-700"
-                              : campaign.status === "Failed"
-                              ? "text-red-700"
+                            ? "text-[#22C55E]"
+                            : campaign.status === "Failed"
+                            ? "text-[#FF424C]"
                               : campaign.status === "Pending"
-                              ? "text-yellow-700"
+                              ? "text-[#FACC15]"
                               : "text-[#0066FF]"
                           }`}
-                        />
+                          />
                         {campaign.status}
                       </span>
                     </td>
+
 
                     <td className="border-zinc-300 text-[16px] font-normal font-body p-2">
                       <div className="flex text-[#191d23] text-base font-semibold mt-2">
